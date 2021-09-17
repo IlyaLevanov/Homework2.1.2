@@ -20,9 +20,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeCircleView(view: redLight)
-        makeCircleView(view: yellowLight)
-        makeCircleView(view: greenLight)
 
         switchButton.layer.cornerRadius = 10
         switchButton.layer.masksToBounds = true
@@ -31,6 +28,12 @@ class ViewController: UIViewController {
         yellowLight.alpha = lightIsOff
         greenLight.alpha = lightIsOff
         
+    }
+    
+    override func viewWillLayoutSubviews() {
+    makeCircleView(view: redLight)
+    makeCircleView(view: yellowLight)
+    makeCircleView(view: greenLight)
     }
     
     @IBAction func switchButtonPress() {
