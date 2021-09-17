@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let lightIsOff: CGFloat = 0.4
-    let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.4
+    private let lightIsOn: CGFloat = 1
     
     
     @IBOutlet var redLight: UIView!
@@ -53,8 +53,8 @@ class ViewController: UIViewController {
                 
     }
     
-    func makeCircleView(view: UIView){
-        view.layer.cornerRadius = view.bounds.size.width/2
+    private func makeCircleView(view: UIView){
+        view.layer.cornerRadius = view.frame.width / 2
     }
     
     
